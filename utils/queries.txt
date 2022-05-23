@@ -1,0 +1,57 @@
+# {
+#   products{
+#     id
+#     description
+#     price
+#     reviews {
+#       comment
+#     }
+#   }
+#   orders{
+#     date
+#     subtotal
+#     items{
+#       product{
+#         id
+#       }
+#       qty
+#     }
+#   }
+# }
+
+# {
+#   productsByRange(min:10,max:50){
+#     id
+#   }
+# }
+
+
+# {
+#   productById(id:"blackPant"){
+#     id
+#     description
+#     price
+    
+#   }
+# }
+
+# mutation {
+#   addNewProduct(id:"kurta",description:"indian clothing",price:3452){
+#     id
+#     description
+#     price
+#     reviews{
+#       rating
+#     }
+#   }
+# }
+
+
+# giving aliases to avoid conflicts
+# mutation {
+#   blackPantReview:addReviewToProduct(productId:"blackPant",rating:3,comment:"review to black pant"){
+#     productId
+#     rating
+#     comment
+#   }
+# }
